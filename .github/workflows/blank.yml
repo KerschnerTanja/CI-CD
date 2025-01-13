@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cicd_example_binary  # Artifact name
+          path: ./cicd_example/bin/Debug/cicd_example.exe    # Files or folder to upload
